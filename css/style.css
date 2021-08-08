@@ -1,7 +1,63 @@
-.login1 {
-    border: 5px solid blue;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-.login2 {
-    border: 10px solid lightblue;
+.box {
+    width: 500px;
+    height: 500px;
+    margin: 20px auto;
+    font-size: 30px;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    text-align: center;
+    /* text-indent: 30px;
+    white-space: pre; */
+
+    /*top right bottom left*/
+    border-width: 2px 6px 8px 12px;
+    border-style: dashed dotted double groove;
+    border-color: lightblue lightskyblue lightsteelblue rgb(47, 190, 226);
+    /*top right bottom left*/
+
+    /*symmetry(doi xung)*/
+    /* border-width: 6px 10px;
+    border-style: groove dotted;
+    border-color: lightblue lightskyblue; */
+    /*symmetry(doi xung)*/
 }
+
+/* .box span {
+    vertical-align: super;
+    vertical-align: sub;
+} */
+
+/* .main {
+    display: table;
+}
+
+.left {
+    background-color: lightskyblue;
+    width: 50px;
+    height: 30px;
+    display: table-cell;
+}
+
+.right {
+    background-color: lightsteelblue;
+    width: 160px;
+    height: 30px;
+    display: table-cell;
+}
+
+.content {
+    background-color: lightblue;
+    width: 400px;
+    height: 30px;
+    display: table-cell;
+}
+
+.txt {
+    text-align: center;
+    font-size: larger;
+} */
