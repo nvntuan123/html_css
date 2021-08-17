@@ -1,7 +1,8 @@
-#ulMenu {
-    list-style: none;
+#ulMenu, ul.ulMenuCon {
+    list-style-type: none;
     padding-left: 0px;
 }
+
 li.liMenu {
     float: left;
     position: relative;
@@ -17,11 +18,6 @@ li.liMenu:hover a {
     padding: 14px 16px;
     display: block;
     white-space: nowrap;
-}
-
-#ulMenu, ul.ulMenuCon {
-    list-style-type: none;
-    padding-left: 0px;
 }
 
 ul.ulMenuCon {
