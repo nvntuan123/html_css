@@ -12,11 +12,22 @@
     position: relative;
 }
 
-/* p::befoare {
-    content: "Khóa Front-End Master ";
-} */
-
-p::after {
-    content: " - Khóa Front-End Master";
+label[for] {
     color: lightseagreen;
+}
+
+label[for="text1"] {
+    color: lime;
+}
+
+label[for^="te"] {
+    color: mediumpurple;
+}
+
+label[for$="xt3"] {
+    color: palevioletred;
+}
+
+label[for*="ex"] {
+    color: pink;
 }
