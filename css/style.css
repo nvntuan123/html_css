@@ -12,16 +12,11 @@
     position: relative;
 }
 
-/* span::first-letter {
-    font-size: 100px;
-    color: chartreuse;
-}
-
-p::first-letter {
-    font-size: 100px;
-    color: chartreuse;
+/* p::befoare {
+    content: "Khóa Front-End Master ";
 } */
 
-p::first-line {
-    color: chartreuse;
+p::after {
+    content: " - Khóa Front-End Master";
+    color: lightseagreen;
 }
