@@ -11,15 +11,15 @@ div.container {
 }
 
 .container {
-    /*flex-basic|direction: width|row*/
+    /*flex-basic|direction: width|column*/
     width: 500px;
-    height: 100px;
+    height: 600px;
     border: 3px solid lightblue;
     margin: 60px auto;
     display: flex;
     text-align: center;
     line-height: 100px;
-    flex-direction: row;
+    flex-direction: column;
     /* flex-wrap: wrap; */
     /* flex-wrap: wrap-reverse; */
     /* align-items: flex-start; */
@@ -86,7 +86,7 @@ item3 = 1/6 * 450 = 75
 ***FLEX-GROW***
 */
 .items {
-    width: 100px;
+    height: 100px;
     flex-basis: 120px;
 }
 
