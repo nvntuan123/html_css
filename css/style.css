@@ -1,149 +1,97 @@
-* { 
+* {
     margin: 0;
     padding: 0;
 }
 
-div.container {
-    font-size: 25px;
+html {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    font-weight: 600;
+}
+
+/*
+1vh = 1% height
+100vh = 100% height
+VD: height = 800px
+=> 1vh = 8px height
+----------------------
+1vw = 1% width
+100vw = 100% width
+VD: width = 650px
+=> 1vw = 6.5px width
+*/
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: lightblue;
 }
 
 .container {
-    /*flex-basic|direction: width|column*/
-    max-width: 800px;
-    height: 120px;
-    border: 3px solid lightblue;
-    margin: 60px auto;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
-    text-align: center;
-    line-height: 120px;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* flex-wrap: wrap-reverse; */
-    /* align-items: flex-start; */
-    /* justify-content: space-around; */
-    /* align-content: stretch; */
-}
-/*
-***FLEX-GROW***
-container: width = 600
-item: width = 100, flex-grow = 1
-item1: flex-grow = 2
-
-Total = 4
-item1 = 2
-item2 = 1
-item3 = 1
-width: item1 + item2 + item3 = 100 + 100 + 100 = 300
-space = 600 - 300 = 300
-item1: 1/2 * 300 = 150
-item2: 1/4 * 300 = 75
-item3: 1/4 * 300 = 75
-=>  item1: 100 + 150 = 250
-    item2: 100 + 75 = 175
-    item3: 100 + 75 = 175
-
----------------------
-container: width = 900
-item: width = 100, flex-grow = 1
-item1: flex-grow = 2
-item2: flex-grow = 3
-
-Total = 6
-item1 = 2
-item2 = 3
-item3 = 1
-width = item1 + item2 + item3 = 100 + 100 + 100 = 300
-space = 900 - 300 = 600
-item1 = 1/3 * 600 = 200
-item2 = 1/2 * 600 = 300
-item3 = 1/6 * 600 = 100
-=>  item1 = 100 + 200 = 300
-    item2 = 100 + 300 = 400
-    item3 = 100 + 100 = 200
-
----------------------
-container: width = 900
-item: width = 150, flex-grow = 1
-item1: flex-grow = 2
-item2: flex-grow = 3
-
-Total = 6
-item1 = 2
-item2 = 3
-item3 = 1
-width = item1 + item2 + item3 = 150 + 150 + 150 = 450
-space = 900 - 450 = 450
-item1 = 1/3 * 450 = 150
-item2 = 1/2 * 450 = 225
-item3 = 1/6 * 450 = 75
-=>  item1 = 150 + 150 = 300
-    item2 = 150 + 225 = 375
-    item3 = 150 + 75 = 225
-
-***FLEX-GROW***
-
-***FLEX-SHRINK***
-item1: 200
-item2: 200
-item3: 200
-Tong: 600
-container giam con: 450
-giam: 600 - 450 = 150
-tong shrink = 3
-item1-shrink = 1
-item1-shrink = 1
-item1-shrink = 1
-=>  item1-sh = 1/3 * 150 = 50
-    item2-sh = 1/3 * 150 = 50
-    item3-sh = 1/3 * 150 = 50
-Result: item1 = 200 - 50 = 150
-        item2 = 200 - 50 = 150
-        item3 = 200 - 50 = 150
----------------------------------------
-item1: 230
-item2: 230
-item3: 230
-Tong: 690
-container giam con: 500
-giam: 690 - 500 = 190
-tong shrink = 4
-item1-shrink = 1
-item1-shrink = 1
-item1-shrink = 2
-=>  item1-sh = 1/4 * 190 = 47.5
-    item2-sh = 1/4 * 190 = 47.5
-    item3-sh = 1/2 * 190 = 95
-Result: item1 = 230 - 47.5 = 182.5
-        item2 = 230 - 47.5 = 182.5
-        item3 = 230 - 95 = 135
-***FLEX-SHRINK***
-*/
-.items {
-    width: 230px;
+    align-items: center;
+    justify-content: center;
 }
 
-.item-1 {
-    background-color: #3AAF85;
-    flex-shrink: 1;
+.left {
+    width: 50%;
+    height: 600px;
+    background: url(../img/hinh-anh-background-buc-tuong-den-sang_034910394.jpg) no-repeat center / cover;
+    border-radius: 10px;
 }
 
-.item-2 {
-    background-color: #038387;
-    flex-shrink: 1;
+.right {
+    width: 50%;
+    min-height: 500px;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 20px;
+    color: white;
+    margin-left: -100px;
 }
 
-.item-3 {
-    background-color: #D13438;
-    flex-shrink: 2;
+.right h1 {
+    font-size: 26px;
+    font-weight: lighter;
 }
 
-/* .item-4 {
-    background-color: #3498DB;
+.right p {
+    margin: 20px 0;
+    font-weight: 500;
+    line-height: 25px;
 }
 
-.item-5 {
-    background-color: #E67E22;
-} */
+.right a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    background-color: white;
+    display: inline-block;
+    letter-spacing: 2px;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    .left {
+        width: 100%;
+        height: 400px;
+    }
+
+    .right {
+        width: 80%;
+        margin: 0;
+        margin-top: -100px;
+    }
+}
