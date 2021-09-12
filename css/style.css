@@ -1,97 +1,103 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*
-1vh = 1% height
-100vh = 100% height
-VD: height = 800px
-=> 1vh = 8px height
-----------------------
-1vw = 1% width
-100vw = 100% width
-VD: width = 650px
-=> 1vw = 6.5px width
-*/
-
-section {
-    min-height: 100vh;
-    width: 100%;
+.container {
     display: flex;
-    background-color: lightblue;
+    align-items: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    background: lightblue;
 }
 
-.container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+.items {
+    flex: 1 1 300px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .3);
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.items .images {
+    padding: 10px;
+    background: #eee;
+    text-align: center;
+}
+
+.items images img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, .7));
+}
+
+.items .info .title {
+    padding: 10px;
+    color: #666;
+    font-size: 20px;
+}
+
+.items .info .infoDetail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-top: 1px solid rgba(0, 0, 0, .3);
+}
+
+.items .info .infoDetail .price {
+    color: #ff3300;
+    font-size: 20px;
+}
+
+.items .info .infoDetail .price span {
+    color: #999;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.items .info .infoDetail .stars i {
+    color: orange;
+    font-size: 18px;
+}
+
+.items .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 430px;
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: none;
+    transform: scale(0);
 }
 
-.left {
-    width: 50%;
-    height: 600px;
-    background: url(../img/hinh-anh-background-buc-tuong-den-sang_034910394.jpg) no-repeat center / cover;
-    border-radius: 10px;
+.items:hover .overlay {
+    transform: scale(1);
 }
 
-.right {
-    width: 50%;
-    min-height: 500px;
-    background-color: cornflowerblue;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    padding: 20px;
-    color: white;
-    margin-left: -100px;
+.items .overlay a {
+    color: #666;
+    background: #fff;
+    margin: 10px;
+    padding: 13px 15px;
+    font-size: 25px;
+    transform: translateY(-190px);
+    transition-property: transform;
+    transition-delay: calc(.08s * var(--i));
+    /* transition-delay: 3s; */
 }
 
-.right h1 {
-    font-size: 26px;
-    font-weight: lighter;
+.items:hover .overlay a {
+    transform: translateY(0px);
 }
 
-.right p {
-    margin: 20px 0;
-    font-weight: 500;
-    line-height: 25px;
-}
-
-.right a {
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    padding: 20px 30px;
-    background-color: white;
-    display: inline-block;
-    letter-spacing: 2px;
-    border-radius: 3px;
-}
-
-@media only screen and (max-width: 800px) {
-    .container {
-        flex-direction: column;
-        width: 100%;
-        margin: 0 10px;
-    }
-
-    .left {
-        width: 100%;
-        height: 400px;
-    }
-
-    .right {
-        width: 80%;
-        margin: 0;
-        margin-top: -100px;
-    }
+.items .overlay a:hover {
+    color: orange;
 }
